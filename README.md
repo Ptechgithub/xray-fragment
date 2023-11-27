@@ -6,6 +6,7 @@ Install
 bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/xray-fragment/main/xy.sh)
 ```
 ![11](https://raw.githubusercontent.com/Ptechgithub/configs/main/media/11.jpg)
+
 - دورزدن محدودیت YouTube  و X(Twitter) به کمک Termux و Fragment  بدون سرور.
 - با این اسکریپت روی Termux یک کانفیگ از نوع  vless یا vmess میسازید. 
 - کانفیگ را در برنامه ی NekoBox کپی کنید. 
