@@ -15,6 +15,6 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/xray-fragment/ma
 - حالا میتونید YouTube و X را بدون محدودیت نگاه کنید. 
 
 
-- Download [Nekobox](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases)
+- Download [Nekobox](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases) دانلود 
 
 ![neko](https://raw.githubusercontent.com/Ptechgithub/configs/main/media/neko.gif)
