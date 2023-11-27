@@ -9,6 +9,6 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/xray-fragment/ma
 - با این اسکریپت روی Termux یک کانفیگ از نوع  vless یا vmess میسازید. 
 - کانفیگ را در برنامه ی NekoBox کپی کنید. 
 - مجدد اسکریپت را اجرا میکنید و Run Vpn را انتخاب می‌کنید. 
-- تنظیمات را طبق تصاویر زیر تغییر میدهید. 
+- طبق Gif زیر تنظیمات Dns و Exclude کردن Termux در برنامه ی Nekobox را انجام بدید. 
 
 ![neko](https://raw.githubusercontent.com/Ptechgithub/configs/main/media/neko.gif)
