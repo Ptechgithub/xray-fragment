@@ -6,7 +6,7 @@
 - مجدد اسکریپت را اجرا میکنید و Run Vpn را انتخاب می‌کنید. 
 - تنظیمات را طبق تصاویر زیر تغییر میدهید. 
 
-
+![neko](https://raw.githubusercontent.com/Ptechgithub/configs/main/media/neko.gif)
 
 Install
 ```
