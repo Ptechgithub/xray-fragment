@@ -12,6 +12,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/xray-fragment/ma
 - کانفیگ را در برنامه ی NekoBox کپی کنید. 
 - مجدد اسکریپت را اجرا میکنید و Run Vpn را انتخاب می‌کنید. 
 - طبق Gif زیر تنظیمات Dns و Exclude کردن Termux در برنامه ی Nekobox را انجام بدید. 
+- حالا میتونید YouTube و X را بدون محدودیت نگاه کنید. 
 
 - Download [Nekobox](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases)
 
