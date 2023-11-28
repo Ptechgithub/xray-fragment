@@ -17,7 +17,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/xray-fragment/ma
 - حالا میتونید YouTube و X را بدون محدودیت نگاه کنید. 
 - اگه خواستید که log رو در Termux خاموش کنید  فایل config.json که در دایرکتوری xy-fragment قرار دارد را ویرایش کنید و ابتدای کد مقدار warning را به none تغییر بدید. 
 
-[آموزش در کانال IR_Tech](https://youtu.be/77MWWP4PJsc)
+- [آموزش در کانال IR_Tech](https://youtu.be/77MWWP4PJsc)
 
 - Download [Nekobox](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases) دانلود 
 
