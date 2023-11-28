@@ -13,7 +13,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/xray-fragment/ma
 - مجدد اسکریپت را اجرا میکنید و Run Vpn را انتخاب می‌کنید. 
 - طبق Gif زیر تنظیمات Dns و Exclude کردن Termux در برنامه ی Nekobox را انجام بدید. 
 - حالا میتونید YouTube و X را بدون محدودیت نگاه کنید. 
-
+- اگه خواستید که log رو در Termux خاموش کنید  فایل config.json که در دایرکتوری xy-fragment قرار دارد را ویرایش کنید و ابتدای کد مقدار warning را به none تغییر بدید. 
 
 - Download [Nekobox](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases) دانلود 
 
