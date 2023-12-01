@@ -145,13 +145,178 @@ config-vmess() {
 EOL
 }
 
+config-socks() {
+    cat << EOL > ~/xy-fragment/config.json
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "tag": "dns",
+    "hosts": {
+      "cloudflare-dns.com": [
+        "104.16.248.249",
+        "104.16.249.249"
+      ],
+      "domain:youtube.com": [
+        "google.com"
+      ],
+      "domain:x.com": [
+      "google.com"
+      ]
+    },
+    "servers": [
+      "https://cloudflare-dns.com/dns-query"
+    ]
+  },
+  "inbounds": [
+    {
+      "domainOverride": [
+        "http",
+        "tls"
+      ],
+      "protocol": "socks",
+      "tag": "socks-in",
+      "listen": "127.0.0.1",
+      "port": $port,
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "tag": "fragment-out",
+      "domainStrategy": "UseIP",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      },
+      "settings": {
+        "fragment": {
+          "packets": "tlshello",
+          "length": "100-200",
+          "interval": "20-30"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "domainStrategy": "UseIP"
+        }
+      }
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "protocol": "vless",
+      "tag": "fakeproxy-out",
+      "domainStrategy": "",
+      "settings": {
+        "vnext": [
+          {
+            "address": "google.com",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "randomized",
+          "publicKey": "",
+          "serverName": "google.com",
+          "shortId": "",
+          "show": false,
+          "spiderX": ""
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "google.com"
+          },
+          "path": "/"
+        }
+      }
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": [
+          "socks-in"
+        ],
+        "type": "field",
+        "port": "8443",
+        "outboundTag": "dns-out",
+        "enabled": true
+      },
+      {
+        "inboundTag": [
+          "socks-in"
+        ],
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "fragment-out",
+        "enabled": true
+      }
+    ],
+    "strategy": "rules"
+  },
+  "stats": {}
+}
+EOL
+}
+
 #Install
 install() {
     download-xray
     clear
     uuid=$(~/xy-fragment/xray uuid)
     read -p "Enter a Port between [1024 - 65535]: " port
-    read -p "Which Config do you need? [vless/vmess]. Default: vmess " config
+    read -p "Which Config do you need? [vless/vmess/socks]. Default: vmess " config
     config=${config:-"vmess"}
     
     if [ "$config" == "vless" ]; then
@@ -162,6 +327,20 @@ install() {
         echo -e "${green}Copy the config and go back to the main Menu${rest}"
         echo -e "${green}and select Run VPN [ Exclude Termux in Your Client [Nekobox] ${rest}"
         echo "vmess://$encoded_vmess" > ~/xy-fragment/vless-tcp.txt
+        
+    elif [ "$config" == "socks" ]; then
+        config-socks
+        socks="socks5://127.0.0.1:$port/#Peyman%20YouTube%20%26%20X"
+        
+        echo -e "${blue}--------------------------------------${rest}"
+        echo -e "${yellow}$socks${rest}"
+        echo -e "${blue}--------------------------------------${rest}"
+        echo ""
+        echo -e "${green}Use this DNS --> https://cloudflare-dns.com/dns-query${rest}"
+        echo -e "${green}Copy the config and go back to the main Menu${rest}"
+        echo -e "${green}and select Run VPN [ Exclude Termux in Your Client [Nekobox] ${rest}"
+        
+        echo "$socks" > ~/xy-fragment/socks.txt
         
     else
         config-vmess
