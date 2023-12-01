@@ -317,7 +317,7 @@ install() {
     clear
     uuid=$(~/xy-fragment/xray uuid)
 
-    echo -e "${green}Select a Config: ${rest}"
+    echo -e "${purple}Select a Config: ${rest}"
     echo -e "${green}1) socks${rest}"
     echo -e "${green}2) vmess${rest}"
     echo -e "${green}3) vless${rest}"
