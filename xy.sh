@@ -321,7 +321,7 @@ install() {
     echo -e "${green}1) socks${rest}"
     echo -e "${green}2) vmess${rest}"
     echo -e "${green}3) vless${rest}"
-    echo -e "${Yellow} select SOCKS for IRANCELL${rest}"
+    echo -e "${yellow}select SOCKS for IRANCELL${rest}"
     read -p "Enter the number of Config [1/2/3]. Default: 2 : " choice
 
     case $choice in
