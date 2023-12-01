@@ -317,10 +317,10 @@ install() {
     clear
     uuid=$(~/xy-fragment/xray uuid)
 
-    echo "Select a Config:"
-    echo "1) socks"
-    echo "2) vmess"
-    echo "3) vless"
+    echo -e "${green}Select a Config: ${rest}"
+    echo -e "${green}1) socks${rest}"
+    echo -e "${green}2) vmess${rest}"
+    echo -e "${green}3) vless${rest}"
     read -p "Enter the number of Config [1/2/3]. Default: 2 : " choice
 
     case $choice in
@@ -349,7 +349,7 @@ install() {
         echo -e "${yellow}$socks${rest}"
         echo -e "${blue}--------------------------------------${rest}"
         echo ""
-        echo -e "${green}Use this DNS --> https://cloudflare-dns.com/dns-query${rest}"
+        echo -e "${purple}Use this DNS --> https://cloudflare-dns.com/dns-query${rest}"
         echo -e "${green}Copy the config and go back to the main Menu${rest}"
         echo -e "${green}and select Run VPN [ Exclude Termux in Your Client [Nekobox] ${rest}"
         echo "$socks" > ~/xy-fragment/socks.txt
