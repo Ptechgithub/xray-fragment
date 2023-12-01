@@ -7,6 +7,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/xray-fragment/ma
 ```
 ![11](https://raw.githubusercontent.com/Ptechgithub/configs/main/media/11.jpg)
 
+## برای ایرانسل از socks اسنفاده کنید و داخل برنامه ی NekoBox در بخش dns به جای 1.1.1.1 از cloudflare-dns.com استفاده کنید.
 
 - دورزدن محدودیت YouTube  و X(Twitter) و Google Play توسط Termux با Fragment xray. 
 - با این اسکریپت روی Termux یک کانفیگ از نوع  vless یا vmess میسازید. 
