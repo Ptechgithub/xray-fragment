@@ -338,7 +338,7 @@ install() {
         echo -e "${green}Use this DNS --> https://cloudflare-dns.com/dns-query${rest}"
         echo -e "${green}Copy the config and go back to the main Menu${rest}"
         echo -e "${green}and select Run VPN [ Exclude Termux in Your Client [Nekobox] ${rest}"
-        echo "$config-socks" > ~/xy-fragment/socks.txt
+        echo "$socks" > ~/xy-fragment/socks.txt
         
     else
         config-vmess
