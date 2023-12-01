@@ -236,6 +236,7 @@ config-socks() {
               {
                 "encryption": "none",
                 "level": 8,
+                "id": "UUID",
                 "security": "auto"
               }
             ]
