@@ -331,7 +331,6 @@ install() {
     elif [ "$config" == "socks" ]; then
         config-socks
         socks="socks5://127.0.0.1:$port/#Peyman%20YouTube%20%26%20X"
-        
         echo -e "${blue}--------------------------------------${rest}"
         echo -e "${yellow}$socks${rest}"
         echo -e "${blue}--------------------------------------${rest}"
@@ -339,7 +338,6 @@ install() {
         echo -e "${green}Use this DNS --> https://cloudflare-dns.com/dns-query${rest}"
         echo -e "${green}Copy the config and go back to the main Menu${rest}"
         echo -e "${green}and select Run VPN [ Exclude Termux in Your Client [Nekobox] ${rest}"
-        
         echo "$socks" > ~/xy-fragment/socks.txt
         
     else
@@ -353,7 +351,6 @@ install() {
         echo ""
         echo -e "${green}Copy the config and go back to the main Menu${rest}"
         echo -e "${green}and select Run VPN [ Exclude Termux in Your Client [Nekobox] ${rest}"
-        
         echo "vmess://$encoded_vmess" > ~/xy-fragment/vmess-ws.txt
     fi
 }
