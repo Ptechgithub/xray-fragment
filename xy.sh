@@ -316,7 +316,7 @@ install() {
     clear
     uuid=$(~/xy-fragment/xray uuid)
     read -p "Enter a Port between [1024 - 65535]: " port
-    read -p "Which Config do you need? [vless/vmess/socks]. Default: vmess " config
+    read -p "Which Config do you need? [vless/vmess/socks]. Default: vmess : " config
     config=${config:-"vmess"}
     
     if [ "$config" == "vless" ]; then
