@@ -5,6 +5,8 @@ Install
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/xray-fragment/main/xy.sh)
 ```
+- [آموزش در کانال IR_Tech](https://youtu.be/77MWWP4PJsc)
+
 ![11](https://raw.githubusercontent.com/Ptechgithub/configs/main/media/11.jpg)
 
 ## برای ایرانسل از socks اسنفاده کنید و داخل برنامه ی NekoBox در بخش dns به جای 1.1.1.1 از cloudflare-dns.com استفاده کنید.
@@ -17,8 +19,6 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/xray-fragment/ma
 - طبق Gif زیر تنظیمات Dns و Exclude کردن Termux در برنامه ی Nekobox را انجام بدید. 
 - حالا میتونید YouTube و X را بدون محدودیت نگاه کنید. 
 - اگه خواستید که log رو در Termux خاموش کنید  فایل config.json که در دایرکتوری xy-fragment قرار دارد را ویرایش کنید و ابتدای کد مقدار warning را به none تغییر بدید. 
-
-- [آموزش در کانال IR_Tech](https://youtu.be/77MWWP4PJsc)
 
 - Download [Nekobox](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases) دانلود 
 
