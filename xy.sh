@@ -209,7 +209,7 @@ config-socks() {
         "fragment": {
           "packets": "tlshello",
           "length": "100-200",
-          "interval": "20-30"
+          "interval": "10-20"
         }
       },
       "streamSettings": {
