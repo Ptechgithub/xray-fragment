@@ -322,11 +322,12 @@ install() {
     if [ "$config" == "vless" ]; then
         config-vless
         echo -e "${blue}--------------------------------------${rest}"
-        echo -e "${yellow}vless://$uuid@127.0.0.1:$port/?type=tcp&encryption=none#Peyman%20YouTube%20%26%20X${rest}"
+        vless_url="vless://$uuid@127.0.0.1:$port/?type=tcp&encryption=none#Peyman%20YouTube%20%26%20X"
+        echo -e "${yellow}$vless_url${rest}"
         echo -e "${blue}--------------------------------------${rest}"
         echo -e "${green}Copy the config and go back to the main Menu${rest}"
         echo -e "${green}and select Run VPN [ Exclude Termux in Your Client [Nekobox] ${rest}"
-        echo "$config-vless" > ~/xy-fragment/vless-tcp.txt
+        echo "$vless_url" > ~/xy-fragment/vless-tcp.txt
         
     elif [ "$config" == "socks" ]; then
         config-socks
