@@ -326,7 +326,7 @@ install() {
         echo -e "${blue}--------------------------------------${rest}"
         echo -e "${green}Copy the config and go back to the main Menu${rest}"
         echo -e "${green}and select Run VPN [ Exclude Termux in Your Client [Nekobox] ${rest}"
-        echo "vmess://$encoded_vmess" > ~/xy-fragment/vless-tcp.txt
+        echo "$config-vless" > ~/xy-fragment/vless-tcp.txt
         
     elif [ "$config" == "socks" ]; then
         config-socks
@@ -338,7 +338,7 @@ install() {
         echo -e "${green}Use this DNS --> https://cloudflare-dns.com/dns-query${rest}"
         echo -e "${green}Copy the config and go back to the main Menu${rest}"
         echo -e "${green}and select Run VPN [ Exclude Termux in Your Client [Nekobox] ${rest}"
-        echo "$socks" > ~/xy-fragment/socks.txt
+        echo "$config-socks" > ~/xy-fragment/socks.txt
         
     else
         config-vmess
